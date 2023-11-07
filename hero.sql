@@ -170,3 +170,8 @@ SELECT p.player_name, h.hero_name
 FROM player p
 INNER JOIN hero h ON p.hero_id = h.hero_id
 WHERE h.is_active = true;
+
+SELECT h.hero_name
+FROM hero h
+JOIN class c ON h.class_id = c.class_id
+WHERE c.class_name = 'Skilled Archers' OR c.class_name = 'Range Archers';
